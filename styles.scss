@@ -1,0 +1,109 @@
+:root {
+    --bg-color: rgb(0, 132, 255);
+    --text-color: white;
+    --line-color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    margin: 0;
+    overflow: hidden;
+}
+
+#dpi {
+    height: 1in;
+    width: 1in;
+    left: 100%;
+    position: fixed;
+    top: 100%;
+}
+
+.left-ruler {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 1.5cm;
+    color: var(--text-color);
+    text-align: right;
+    .left-line {
+        background-color: var(--line-color);
+        height: 0.2mm;
+        margin: 0.765mm 0mm 0mm 0mm;
+    }
+    .left-ruler__cm {
+        width: 1.2cm;
+    }
+    .left-ruler__mm {
+        width: 5mm;
+    }
+    .left-ruler__mid {
+        width: 8mm;
+    }
+}
+
+.top-ruler {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 1.5cm;
+    color: var(--text-color);
+    text-align: bottom;
+    line-height: 2cm;
+    text-indent: 1mm;
+    .top-line {
+        background-color: var(--line-color);
+        width: 0.2mm;
+        margin: 0mm 0.765mm 0mm 0mm;
+    }
+    .top-ruler__cm {
+        height: 1.2cm;
+    }
+    .top-ruler__mm {
+        height: 5mm;
+    }
+    .top-ruler__mid {
+        height: 8mm;
+    }
+}
+
+.body-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .color-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .color-selector {
+            overflow: hidden;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin: 0.5rem;
+            border: 0.5rem solid white;
+        }
+    }
+    .reset-color-button {
+        width: 12rem;
+        height: 2rem;
+        border-radius: 500px;
+        border: 0 solid transparent;
+    }
+}
+
+input[type="color"] {
+    padding: 0;
+    width: 150%;
+    height: 150%;
+    margin: -25%;
+}
